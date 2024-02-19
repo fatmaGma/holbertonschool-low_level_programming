@@ -6,12 +6,16 @@
  */
 int main(void)
 {
-	int i;
-	double d;
 	char c;
+	int i;
+	long int li;
+	long long int lli;
+	float f;
 
-	printf("the size of an int is: %lu.\n", (unsigned long)sizeof(i));
-	printf("the size of a double is; %lu.\n", (unsigned long)sizeof(d));
-	printf("the size of a c is; %lu.\n", (unsigned long)sizeof(d));
+	printf("Size of a char: %lu.\n", (unsigned long)sizeof(c), "byte(s)");
+	printf("Size if an int: %lu.\n", (unsigned long)sizeof(i), "byte(s)");
+	printf("Size of a long int: %lu.\n", (unsigned long)sizeof(li)"byte(s)");
+	printf("Size of a long long int:%lu.\n", (unsigned long)sizeof(lli)"byte(s)");
+	printf("Size of a float: %lu.\n", (unsigned long)sizeof(f)"byte(s)");
 	return (0);
 }
