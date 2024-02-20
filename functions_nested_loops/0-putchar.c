@@ -1,11 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * _putchar function
- * print a character
- * Return:  0 (Success)
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-int _putchar(char c) 
+int main(void)
 {
-	putchar(c);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	printf("\n");
 	return (0);
 }
