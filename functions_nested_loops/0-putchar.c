@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * _putchar function
+ * print a character
+ * Return:  0 (Success)
  */
-int main(void)
+int _putchar(char c) //c the caracter that the function will print
 {
-	printf("_putchar\n");
+	putchar(c);
 	return (0);
 }
