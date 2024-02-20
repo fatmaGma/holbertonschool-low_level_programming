@@ -4,7 +4,7 @@
  * print a character
  * Return:  0 (Success)
  */
-int _putchar(char c) //c the caracter that the function will print
+int _putchar(char c) 
 {
 	putchar(c);
 	return (0);
