@@ -11,7 +11,11 @@ void jack_bauer(void)
 	{
 		for (mn = 0; mn < 60; mn++)
 		{
-			printf("%.2d:%.2d\n", h, mn);
+			_putchar(h / 10);
+			_putchar(h % 10);
+			_putchar(':');
+			_putchar(mn / 10);
+			_putchar(mn % 10);
 		}
 	}
 }
