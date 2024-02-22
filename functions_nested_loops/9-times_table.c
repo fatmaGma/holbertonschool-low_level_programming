@@ -27,7 +27,7 @@ void times_table(void)
 			{
 				while (x != 0)
 				{
-					_putchar('0' + x % 10);
+					_putchar(x % 10 + '0');
 					x /= 10;
 				}
 			}
