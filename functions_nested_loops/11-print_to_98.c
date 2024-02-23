@@ -15,8 +15,10 @@ void print_to_98(int n)
 			if (i < 10 && i >= 0)
 			{
 				if (i != n)
+				{
 					_putchar(',');
-				_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar('0' + i);
 			}
 			else if (i < 0 && i > -10)
