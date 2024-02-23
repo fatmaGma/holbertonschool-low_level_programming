@@ -8,16 +8,31 @@ void print_to_98(int n)
 {
 	int i;
 	char buffer[12];
-	int length;
 
 	for (i = n; i < 99; i++)
 	{
-		length = sprintf(buffer, "%d", i);
-		write(STDOUT_FILENO, buffer, length);
-		if (i != 98)
+		int temp = i;
+		int count = 0;
+		int j;
+
+		while (temp != 0)
 		{
-			write(STDOUT_FILENO, ", ", 2);
+			temp /= 10;
+			count++;
 		}
+		for (j = count - 1; j >= 0; j--)
+		{
+			buffer[j] = i % 10 + '0';
+			i /= 10;
+		}
+		for (j = 0; j < count; j++)
+			_putchar(buffer[j]);
+		if (i + 1 != 98)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
+		i = temp;
 	}
-	write(STDOUT_FILENO, "\n", 1);
+	_putchar('\n');
 }
