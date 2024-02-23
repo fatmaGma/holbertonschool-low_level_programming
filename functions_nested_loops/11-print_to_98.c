@@ -37,9 +37,19 @@ void print_to_98(int n)
 				}
 				if (i < 0)
 				{
-					_putchar('-');
-					_putchar('0' + ((-i) / 10));
-					_putchar('0' + ((-i) % 10));
+					if (i >-100)
+					{
+						_putchar('-');
+						_putchar('0' + ((-i) / 10));
+						_putchar('0' + ((-i) % 10));
+					}
+					else
+					{
+						_putchar('-');
+						_putchar('1');
+						_putchar('0' + (((-i) - 100) / 10));
+						_putchar('0' + (((-i) -100) % 10));
+					}
 				}
 				else
 				{
