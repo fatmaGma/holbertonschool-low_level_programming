@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * puts2 - check the code
+ * @str: char
+ * Return: void
  */
 void puts2(char *str)
 {
@@ -14,10 +13,9 @@ void puts2(char *str)
 	{
 		len++;
 	}
-
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ( i % 2 == 0)
+		if (i % 2 == 0)
 			_putchar(str[i]);
 	}
 	_putchar('\n');
