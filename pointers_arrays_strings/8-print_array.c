@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * priny_array - chek the code
+ * print_array - chek the code
  * @a: integer
  * @n: integer
  * Return: void.
