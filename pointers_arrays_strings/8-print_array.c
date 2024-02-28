@@ -1,0 +1,20 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * priny_array - chek the code
+ * @a: integer
+ * @n: integer
+ * Return: void.
+ */
+void print_array(int *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+		printf(", ");
+	}
+	printf("\n");
+}
+
