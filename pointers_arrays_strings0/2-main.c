@@ -8,9 +8,11 @@
  */
 int main(void)
 {
-    int n;
+    char *str;
+    int len;
 
-    n = add(89, 9);
-    printf("%d\n", n);
+    str = "My first strlen!";
+    len = _strlen(str);
+    printf("%d\n", len);
     return (0);
 }

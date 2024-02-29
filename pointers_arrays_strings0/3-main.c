@@ -7,10 +7,9 @@
  */
 int main(void)
 {
-    print_to_98(0);
-    print_to_98(98);
-    print_to_98(111);
-    print_to_98(81);
-    print_to_98(-10);
+    char *str;
+
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    _puts(str);
     return (0);
 }

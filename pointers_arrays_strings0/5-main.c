@@ -8,9 +8,10 @@
  */
 int main(void)
 {
-    int n;
+    char s[10] = "My School";
 
-    n = add(89, 9);
-    printf("%d\n", n);
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
     return (0);
 }
