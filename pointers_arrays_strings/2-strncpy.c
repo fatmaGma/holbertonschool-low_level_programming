@@ -16,6 +16,11 @@ char *_strncpy(char *dest, char *src, int n)
 		*p++ = *src++;
 		n--;
 	}
-	*p = '\0';
+
+	while (n > 0)
+	{
+		*p++ = '\0';
+		n--;
+	}
 	return (dest);
 }
