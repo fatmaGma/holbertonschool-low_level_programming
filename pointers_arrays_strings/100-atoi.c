@@ -14,7 +14,7 @@ int _atoi(char *s)
 
 	while (*s == ' ' || *s == '\t' || *s == '\n' || *s == '-' || *s == '+')
 		s++;
-	if (*s == '-' || *s == '+')
+	while (*s == '-' || *s == '+')
 	{
 		if (*s == '-')
 			sign = -sign;
