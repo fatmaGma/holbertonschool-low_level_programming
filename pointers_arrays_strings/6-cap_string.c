@@ -15,10 +15,12 @@ char *cap_string(char *s)
 	{
 		if (x == 1 && isalpha(s[i]))
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
+			if (s[i] >= 'a' && s[i] <= 'z' && (i == 0 || !isalpha(s[i - 1]) || !isalpha(s[i + 1])))
 				s[i] = s[i] - 32;
 			x = 0;
 		}
+		else if (isdigit(s[i]))
+			x = 0;
 		else if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
 				s[i] == ',' || s[i] == ';' || s[i] == '.' ||
 				s[i] == '!' || s[i] == '?' || s[i] == '"' ||
