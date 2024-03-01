@@ -13,7 +13,7 @@ int _atoi(char *s)
 	int digit;
 
 	while (*s == ' ' || *s == '\t' || *s == '\n')
-		s++;{
+		s++;
 	if (*s == '-')
 	{
 		sign = -1;
