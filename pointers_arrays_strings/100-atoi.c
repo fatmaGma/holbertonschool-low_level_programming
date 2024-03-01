@@ -14,13 +14,12 @@ int _atoi(char *s)
 
 	while (*s == ' ' || *s == '\t' || *s == '\n' || *s == '-' || *s == '+')
 		s++;
-	if (*s == '-')
+	if (*s == '-' || *s == '+')
 	{
-		sign = -1;
+		if (*s == '-')
+			sign = -sign;
 		s++;
 	}
-	else if (*s == '+')
-		s++;
 	while (*s >= '0' && *s <= '9')
 	{
 		digit = *s - '0';
