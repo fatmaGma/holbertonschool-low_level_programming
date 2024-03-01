@@ -12,7 +12,7 @@ int _atoi(char *s)
 	int sign = 1;
 	int digit;
 
-	while (*s == ' ' || *s == '\t' || *s == '\n')
+	while (*s == ' ' || *s == '\t' || *s == '\n' || *s == '-' || *s == '+')
 		s++;
 	if (*s == '-')
 	{
