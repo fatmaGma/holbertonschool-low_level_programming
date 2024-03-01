@@ -15,7 +15,8 @@ char *cap_string(char *s)
 	{
 		if (x == 1 && isalpha(s[i]))
 		{
-			if (s[i] >= 'a' && s[i] <= 'z' && (i == 0 || !isalpha(s[i - 1]) || !isalpha(s[i + 1])))
+			if (s[i] >= 'a' && s[i] <= 'z' && (i == 0 || !isalpha(s[i - 1]) ||
+						!isalpha(s[i + 1])))
 				s[i] = s[i] - 32;
 			x = 0;
 		}
