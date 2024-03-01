@@ -15,7 +15,8 @@ char *cap_string(char *s)
 	{
 		if (x == 1 && isalpha(s[i]))
 		{
-			s[i] = toupper(s[i]);
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] = s[i] - 32;
 			x = 0;
 		}
 		else if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
