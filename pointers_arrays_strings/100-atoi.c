@@ -26,7 +26,7 @@ int _atoi(char *s)
 		digit = *s - '0';
 		if (sign == 1 && (result > (INT_MAX - digit) / 10))
 			return (INT_MAX);
-		else if (sign == -1 && (result < (INT_MIN + digit) /10))
+		else if (sign == -1 && (result < (INT_MIN + digit) / 10))
 			return (INT_MIN);
 		result = result * 10 + sign * digit;
 		s++;
