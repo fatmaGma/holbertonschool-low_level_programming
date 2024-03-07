@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strlen_recursion - check the code
+ * @s: char
+ * Return: integer
  */
 int _strlen_recursion(char *s)
 {
