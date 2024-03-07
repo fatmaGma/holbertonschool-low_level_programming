@@ -12,7 +12,11 @@ int main(int argc, char *argv[])
 	int sum = 1;
 
 	if (argc <= 1)
+	{
 	       printf("Error");
+	       printf ("\n");
+	       return (1);
+	}
 	else
 	{
 		for (i = 1; i < argc; i++)
@@ -20,5 +24,5 @@ int main(int argc, char *argv[])
 		printf("%d", sum);
 	}
 	printf("\n");
-	return (1);
+	return (0);
 }
