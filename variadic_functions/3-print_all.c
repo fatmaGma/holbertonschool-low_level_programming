@@ -7,44 +7,56 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	unsigned int i = 0;
-	char *str;
-	int separator_flag = 0;
+	char c;
+	int i;
+	float f;
+	char *s;
+	const char *ptr = format;
+	int printed;
 
+	va_list args;
 	va_start(args, format);
-	while (format && format[i])
+	printed = 0;
+	while ((c = *ptr++) != '\0')
 	{
-		if (separator_flag)
-			printf(", ");
-		switch (format[i])
+		switch (c)
 		{
 			case 'c':
-				printf("%c", va_arg(args, int));
-				separator_flag = 1;
+				i = va_arg(args, int);
+				if (printed)
+					printf(", ");
+				printf("%c", i);
+				printed = 1;
 				break;
 			case 'i':
-				printf("%d", va_arg(args, int));
-				separator_flag = 1;
+				i = va_arg(args, int);
+				if (printed)
+					printf(", ");
+				printf("%d", i);
+				printed = 1;
 				break;
 			case 'f':
-				printf("%f", va_arg(args, double));
-				separator_flag = 1;
+				f = (float)va_arg(args, double);
+				if (printed)
+					printf(", ");
+				printf("%f", f);
+				printed = 1;
 				break;
 			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
+				s = va_arg(args, char *);
+				if (printed)
+					printf(", ");
+				if (s == NULL)
 					printf("(nil)");
 				else
-					printf("%s", str);
-				separator_flag = 1;
+					printf("%s", s);
+				printed = 1;
 				break;
 			default:
-				separator_flag = 0;
-				break;
+				continue;
 		}
-		i++;
 	}
+
 	va_end(args);
 	printf("\n");
 }
