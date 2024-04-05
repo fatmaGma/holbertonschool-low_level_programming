@@ -1,27 +1,30 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
 /**
- * add_node -  adds a new node at the beginning of a list_t list.
- * @head: list_t
- * @str: string
- * Return: the adr of the new element or NULL
+ * add_node - Adds a new node at the beginning of a list_t list.
+ * @head: Pointer to a pointer to the head of the list
+ * @str: String to be duplicated and added as the new node's str
+ * Return: The address of the new element, or NULL if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
+	char *duplicate_str;
 
 	if (str == NULL)
 		return (NULL);
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 		return (NULL);
-	new_node->str = strdup(str);
-	if (new_node->str == NULL)
+	duplicate_str = strdup(str);
+	if (duplicate_str == NULL)
 	{
 		free(new_node);
 		return (NULL);
 	}
+	new_node->str = duplicate_str;
 	new_node->len = strlen(str);
 	new_node->next = *head;
 	*head = new_node;
