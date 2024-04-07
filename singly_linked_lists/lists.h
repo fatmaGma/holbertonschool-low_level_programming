@@ -6,8 +6,9 @@
  * @str: string
  * @next: points to the next node
  * Description: singly linked list node structure
- * */
-typedef struct list_s {
+ */
+typedef struct list_s
+{
 	char *str;
 	int len;
 	struct list_s *next;
